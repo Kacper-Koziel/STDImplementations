@@ -36,7 +36,7 @@ Vector<T>& Vector<T>::operator=(const Vector<T> &other)
 }
 
 template <typename T>
-Vector<T> &Vector<T>::operator=(Vector<T> &&other)
+Vector<T> &Vector<T>::operator=(Vector<T> &&other) noexcept
 {
     if (this == &other)
     {
