@@ -39,7 +39,7 @@ Stack<T>::Stack(const Stack<T> &other)
 }
 
 template <typename T>
-Stack<T>::Stack(Stack<T> &&other) : stack(other.stack), size(other.size), capacity(other.capacity)
+Stack<T>::Stack(Stack<T> &&other) noexcept : stack(other.stack), size(other.size), capacity(other.capacity)
 {
     other.stack = nullptr;
     other.capacity = 0;
@@ -81,7 +81,7 @@ Stack<T> &Stack<T>::operator=(const Stack<T> &other)
 }
 
 template <typename T>
-Stack<T> &Stack<T>::operator=(Stack<T> &&other)
+Stack<T> &Stack<T>::operator=(Stack<T> &&other) noexcept
 {
     if (this == &other)
     {
