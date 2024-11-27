@@ -20,7 +20,7 @@
         ~Vector();
 
         Vector<T>& operator=(const Vector<T>& other);
-        Vector<T>& operator=(Vector<T>&& other);
+        Vector<T>& operator=(Vector<T>&& other) noexcept;
         T& operator[](unsigned int index);
 
         const T* get() const { return this->vector; }
