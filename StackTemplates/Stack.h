@@ -15,11 +15,11 @@
         Stack();
         Stack(size_t capacity);
         Stack(const Stack<T>& other);
-        Stack(Stack<T>&& other);
+        Stack(Stack<T>&& other) noexcept;
         ~Stack();
 
         Stack<T>& operator=(const Stack<T>& other);
-        Stack<T>& operator=(Stack<T>&& other);
+        Stack<T>& operator=(Stack<T>&& other) noexcept;
 
         void reserve(size_t newSize);
         void push(const T& value);
