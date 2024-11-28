@@ -26,8 +26,6 @@
 
         bool operator<=(const Pair<F, S>& other);
         bool operator>=(const Pair<F, S>& other);
-
-        void operator<<();
     };
 
     template <typename F, typename S>
