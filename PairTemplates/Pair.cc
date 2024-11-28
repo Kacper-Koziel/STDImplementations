@@ -92,8 +92,3 @@ bool Pair<F, S>::operator>=(const Pair<F, S> &other)
 {
     return (this->first > other.first) || (this->first == other.first && this->second >= other.second);
 }
-
-template <typename F, typename S>
-void Pair<F, S>::operator<<()
-{
-}
